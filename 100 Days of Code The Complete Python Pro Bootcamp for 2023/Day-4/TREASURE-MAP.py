@@ -7,6 +7,8 @@ position = input() # Where do you want to put the treasure?
 # 🚨 Don't change the code above 👆
 # Write your code below this row 👇
 
+
+#my code
 row = position[0].lower()
 column = int(position[1])-1
 
@@ -17,6 +19,15 @@ elif row == "b":
 elif row == "c":
     row = 2
 map[column][row] = "X"
+
+#lecturer
+
+letter = position[0].lower()
+abc = ["a", "b", "c"]
+letter_index = abc.index(letter)
+number_index = int(position[1]) - 1
+map[number_index][letter_index] = "X"
+
 
 
 # Write your code above this row 👆
