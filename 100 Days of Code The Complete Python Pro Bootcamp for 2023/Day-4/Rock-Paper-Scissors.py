@@ -51,12 +51,4 @@ elif computer_choice == user:
 elif computer_choice < user:
     print("You win!")
 
-
-
-
-
-
-
-
-
-             
+           
