@@ -5,6 +5,10 @@ names = names_string.split(", ")
 
 import random
 
-winner = random.choice(names)
+# Get the total number of items in list.
+num_items = len(names)
+# Generate random numbers between 0 and the last index. 
+random_choice = random.randint(0, num_items - 1)
+# Choose and print a random name.
 
-print(f"{winner} is going to buy the meal today!")
+print(f"{names[random_choice]} is going to buy the meal today!")

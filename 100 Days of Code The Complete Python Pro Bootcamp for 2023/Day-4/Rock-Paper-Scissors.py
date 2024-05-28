@@ -29,7 +29,7 @@ scissors = '''
 import random
 
 list = [rock, paper, scissors]
-
+choices = ['rock', 'paper', 'scissors']
 user = int(input('What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. '))
 
 computer_choice =  random.randint(0,2)
@@ -51,4 +51,14 @@ elif computer_choice == user:
 elif computer_choice < user:
     print("You win!")
 
-           
+# if user not in [0, 1, 2]:
+#     print("You typed an invalid number, you lose!")
+# else:
+#     computer_choice = random.randint(0, 2)
+#     print(f"Computer chose:\n{choices[computer_choice]}")
+#     if user == computer_choice:
+#         print("It's a draw!")
+#     elif (user - computer_choice) % 3 == 1:
+#         print("You win!")
+#     else:
+#         print("You lose")

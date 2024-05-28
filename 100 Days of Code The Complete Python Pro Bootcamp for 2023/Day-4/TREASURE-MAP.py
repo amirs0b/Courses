@@ -19,6 +19,21 @@ elif row == "b":
 elif row == "c":
     row = 2
 map[column][row] = "X"
+#second solution
+
+row = int(position[1])-1
+column = {"A":0,
+         "B":1,
+         "C":2}
+map[row][column[position[0]]] = "X"
+
+#third solution
+
+row = position[0].lower()
+column = int(position[1])-1
+
+if row in ['a', 'b', 'c']:
+    map[column][ord(row) - ord('a')] = "X"
 
 #lecturer
 
