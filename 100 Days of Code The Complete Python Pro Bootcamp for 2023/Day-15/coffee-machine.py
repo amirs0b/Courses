@@ -98,9 +98,17 @@ while machine_on:
         print(f"Money: ${money}")
     elif order == "off":
         machine_on = False
-    else:
+    elif order in MENU:
         drink = MENU[order]
         if is_resource_sufficient(drink["ingredients"]):
             payment = process_coins()
             if check_transaction_successful(payment, drink["cost"]):
                 make_coffee(order)
+    else:
+        print("Sorry wrong order. Please try again.")
+        re_Run = input("Would you like to try again? (y/n): ")
+        if re_Run == "y":
+             machine_on = True
+        else:
+            print("Thank you!")
+            machine_on = False
